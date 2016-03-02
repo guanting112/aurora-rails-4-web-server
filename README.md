@@ -4,6 +4,8 @@
 
 * Version: 0.1.2 ( 20160302 )
 
+![](http://i.imgur.com/z5hHzfq.png)
+
 # 系統要求
 
 * SSD VPS
@@ -73,7 +75,8 @@ ssh apps@10.10.10.101 -i PRIVATE_KEY
 
 ```bash
 
-# 部署帳號下，有一組 .stickie 是記錄您的帳號密碼相關資料，安裝完成後，日後不需要可以刪除
+# 部署帳號的家目錄下，有一組 .stickie 檔案
+# 該檔案記錄 您的帳號密碼相關資料，安裝完成後，日後不需要可以刪除
 cat /home/apps/.stickie
 
 # 執行 Aurora Rails 4 System Environment 主腳本
@@ -81,8 +84,9 @@ cat /home/apps/.stickie
 
 ```
 
-# 等待腳本執行完畢，若出現以下畫面，則表示成功完成安裝，反之，腳本會提示哪個安裝階段出錯
+# 等待腳本執行完畢，若出現以下畫面，則表示成功完成安裝
 
+![](http://i.imgur.com/TcYgSBp.png)
 
 1. 腳本有測試到資料庫連線，您在上述圖中看到 test connection ok 的訊息，表示 MySQL 連線是正常的
 2. 伺服器安裝完畢後，您可以試著「重開伺服器」 或「重新登入」來確定環境是否載入成功
