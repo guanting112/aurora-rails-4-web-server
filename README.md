@@ -40,7 +40,7 @@
 
 # 需要透過 git 複製腳本資料下來到新機器上
 sudo apt-get install -y git
-git clone https://github.com/guanting112/aurora-rails-4-system-environment.git --branch master --single-branch /tmp
+git clone https://github.com/guanting112/aurora-rails-4-web-server.git --branch master --single-branch /tmp
 
 # 0-machine-setting.sh 是整套腳本的基本設定，可以讓你設定 git repo、ssh key、ssh port、部署帳號的名稱、密碼等等
 # 您可以修改它 或 自行上傳一份自行製作的版本來複寫掉這個檔案
