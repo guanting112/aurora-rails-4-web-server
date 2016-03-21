@@ -59,6 +59,7 @@ write_ssh_key_config()
 write_ssh_authorized_keys()
 {
   printf '%s' "$SSH_AUTHORIZED_KEYS" | sudo tee /home/$DEPLOY_USER_NAME/.ssh/authorized_keys > /dev/null
+  sudo chown $DEPLOY_USER_NAME:$DEPLOY_USER_NAME /home/$DEPLOY_USER_NAME/.ssh/authorized_keys 
 }
 
 random_text()
