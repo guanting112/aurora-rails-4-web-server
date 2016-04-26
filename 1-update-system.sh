@@ -27,7 +27,7 @@ function setup_base()
   sudo apt-get install -y apt-transport-https ca-certificates | shell_message "apt-get/https-support"
 
   echo "Install toolkit" | shell_log
-  sudo apt-get install -y vim git tmux htop bmon | shell_message "apt-get/toolkit-1"
+  sudo apt-get install -y vim git tmux htop bmon ncdu iptraf pwgen | shell_message "apt-get/toolkit-1"
   sudo apt-get install -y git-core curl libffi-dev zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties | shell_message "apt-get/toolkit-2"
   sudo apt-get install -y nodejs | shell_message "apt-get/nodejs"
 
