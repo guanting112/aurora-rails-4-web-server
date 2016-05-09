@@ -265,7 +265,7 @@ server {
     deny  all;
   }
 
-  location ~* \.(?:ico|css|js|gif|jpe?g|png)$ {
+  location ~* \.(?:ico|css|js|gif|jpe?g|png|otf|ttf)$ {
     expires 1h;
   }
 

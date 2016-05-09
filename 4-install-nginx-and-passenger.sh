@@ -146,7 +146,7 @@ http {
   gzip_comp_level 3;
   gzip_buffers 16 8k;
   # gzip_http_version 1.1;
-  gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript image/jpeg image/gif image/png;
+  gzip_types text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript image/jpeg image/gif image/png;
 
   ##
   # nginx-naxsi config
