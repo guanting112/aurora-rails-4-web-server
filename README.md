@@ -17,7 +17,7 @@
 * 系統更新、必要設定、必備套件、node-js、Image Magick 等
 * 建立一組給應用程式用的部署帳號 ( 預設 apps )
 * 建立 Git Repo Deployment Key 與 建立無需密碼即可登入的機制
-* Ruby 2.3.0 程式環境 ( with rbenv )
+* Ruby 2.3.1 程式環境 ( with rbenv )
 * Rails 4.x Web Framework 與 rest-client、mailgun、backup、whenever 套件組
 * Nginx Extras 與 Passenger 伺服器
 * 安裝 MariaDB 5 資料庫系統 ( 經過大量的上線環境運作後，認定是最穩定的分支 )
