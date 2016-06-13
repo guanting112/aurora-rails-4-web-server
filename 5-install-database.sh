@@ -52,6 +52,9 @@ function install_database_server()
 
 function init_database_and_setting()
 {
+  echo "Optimize mysql setting" | shell_log
+  write_mysql_opz_conf
+
   echo "Initial Database and setting" | shell_log
 
   printf '%s' '
@@ -122,6 +125,34 @@ function check_database_user()
   else
     echo "OK"
   fi
+}
+
+function write_mysql_opz_conf()
+{
+  printf '%s' "
+[client]
+default-character-set=utf8
+
+[mysql]
+default-character-set=utf8
+
+[mysqld]
+collation-server = utf8_unicode_ci
+character-set-server = utf8
+" | sudo tee /etc/mysql/conf.d/default_character.cnf > /dev/null
+
+  printf '%s' "
+[mysqld]
+innodb_buffer_pool_size = 256M
+innodb_io_capacit = 800
+innodb_log_buffer_size = 24M
+query_cache_size = 128M
+query_cache_limit = 4M
+key_buffer = 32M
+sort_buffer_size = 8M
+" | sudo tee /etc/mysql/conf.d/mariadb-1g-opz.cnf > /dev/null
+
+  sudo service mysql restart
 }
 
 run_script_install_database
